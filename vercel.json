@@ -20,11 +20,11 @@
       "dest": "server.ts"
     },
     {
-      "src": "/ride/:id",
+      "src": "/:id",
       "dest": "server.ts"
     },
     {
-      "src": "/ride/test",
+      "src": "test",
       "dest": "server.ts"
     }
   ]
