@@ -24,7 +24,7 @@
       "dest": "server.ts"
     },
     {
-      "src": "test",
+      "src": "/test",
       "dest": "server.ts"
     }
   ]
