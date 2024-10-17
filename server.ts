@@ -6,6 +6,7 @@ import * as driverApi from './driver+api';
 import * as userApi from './user+api';
 import * as createRideApi from './ride/create+api';
 import * as getRideApi from './ride/[id]+api';
+import * as testApi from './ride/test';
 
 dotenv.config();
 
@@ -39,10 +40,11 @@ app.get('/', (req, res) => {
 });
 
 // Set up your API routes
-app.use('/api/driver', handleApiRoute(driverApi));
-app.use('/api/user', handleApiRoute(userApi));
-app.post('/api/ride', handleApiRoute(createRideApi));
-app.get('/api/ride/:id', handleApiRoute(getRideApi));
+app.use('/driver', handleApiRoute(driverApi));
+app.use('/user', handleApiRoute(userApi));
+app.post('/ride', handleApiRoute(createRideApi));
+app.get('/ride/:id', handleApiRoute(getRideApi));
+app.get('/ride/test', handleApiRoute(testApi)); 
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
